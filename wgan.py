@@ -45,7 +45,7 @@ class WassersteinGAN(object):
         gpu_options = tf.GPUOptions(allow_growth=True)
         self.sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 
-    def train(self, batch_size=64, num_batches=1000000):
+    def train(self, batch_size=64, num_batches=10000):
         plt.ion()
         self.sess.run(tf.global_variables_initializer())
         start_time = time.time()
